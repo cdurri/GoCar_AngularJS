@@ -1,0 +1,52 @@
+<div class="container-fluid">
+     <div class="row faqs-title">
+         FAQs
+    </div>
+    <div class="row faqs-heading">
+        General – What is GoCar
+    </div>
+    <div class="row">
+        <div class="panel-group" id="accordian">
+            <div ng-repeat="answer in answers" ng-if="$index < 5">
+                <div class="panel panel-default">
+                    <div class="panel-heading faqs-row">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-target="#{{$index}}" data-parent="#accordian">{{ answer.question }}</a>
+                        </h4>
+                    </div>
+                    <div id="{{$index}}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>{{ answer.answer }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row gocar-video">
+        <div class="col-md-4 col-md-offset-4 gocar-video">
+            <iframe style="width:100%; height:100%;" src="https://www.youtube.com/embed/Nf0rpEEnRPs" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 video-button">
+            <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal">Watch Video</button>
+        </div>
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Go Car</h4>
+              </div>
+              <div class="modal-body">
+                <iframe style="width:100%; height:100%;" src="https://www.youtube.com/embed/Nf0rpEEnRPs" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

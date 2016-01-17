@@ -1,17 +1,62 @@
 <!doctype html>
-<html ng-app='routingApp'>
+<html ng-app='goCarApp'>
   <head>
-	<title>Angular Routing Example</title>
+	<title>GoCar</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
 	<link href="css/vendor/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="javascript/vendor/bootstrap.min.js"></script>
 	<script src="javascript/vendor/angular.min.js"></script>
 	<script src="javascript/vendor/angular-route.min.js"></script>
+
+    <script src='javascript/video.js'></script>
+
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
+
+  <nav class="navbar" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+          </button>
+          <a class="navbar-brand" id="logoNav" href="#/home"><img src="images/gocar.png"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav nav-justified">
+            <li><a href="#/home">Home</a></li>
+            <li><a href="#/rates">Rates</a></li>
+            <li><a href="#/locations">Locations</a></li>
+            <li><a href="#/faqs">FAQs</a></li>
+            <li><a href="#/contactus">Contact Us</a></li>
+            <li><a href="#/login">Log In</a></li>
+          </ul>
+        </div>
+      <div class="nav-bottom"></div>
+    </div>
+  </nav>
+
+  <div class="wrapper">
     <div ng-view></div>
+  </div>
+
+  <div class="navbar" id="navbar-bottom">
+
+    <a href="https://www.facebook.com/GoCarIreland" target="_blank"><img src="images/facebook.png"></a>
+    <a href="https://www.linkedin.com/company/gocar-ireland" target="_blank"><img src="images/linkedin.png"></a>
+    <a href="https://www.twitter.com/GoCarIreland" target="_blank"><img src="images/twitter.png"></a>
+  </div>
   </body>
+
 
   <script src='javascript/app.js'></script>
   <script src='javascript/controller.js'></script>

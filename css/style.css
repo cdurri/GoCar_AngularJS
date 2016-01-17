@@ -3,7 +3,423 @@
   box-sizing: border-box;
 }
 
-html {
+html, body {
+
+  height: 100%;
+
+  margin: 0;
+
+  font-family: Dosis;
+}
+
+.row {
+
+    margin-left: 8px;
+
+    margin-right: 8px;
+}
+
+.navbar-brand {
+
+  margin-bottom: 20px;
+}
+
+.nav-bottom {
+
+  height: 3px;
+
+  background-color: #8DC63F;
+
+}
+
+#navbar-bottom {
+
+  height: 100px;
+
+  background-color: #FFFFFF;
+
+  border-top: 3px solid #8DC63F;
+
+  text-align: center;
+
+}
+
+#navbar-bottom > a > img {
+
+  margin-top: 20px;
+
+  padding-right: 50px;
+}
+
+a {
+
+  font-size: 25px;
+
+  font-weight: bold;
+
+  margin-top: 50px;
+
+  color: inherit;
+}
+
+.navbar .nav-justified > li a:hover{
+
+    background:#8DC63F !important;
+}
+
+#logoNav {
+
+  margin-top: -20px;
+
+  margin-right: 100px;
+
+}
+
+.icon-bar {
+
+  background-color: #8DC63F !important;
+}
+
+.wrapper {
+
   min-height: 100%;
+
+  margin-bottom: 100px;
+}
+
+.wrapper:after {
+
+  content: "";
+
+  display: block;
+}
+
+#tagline1 {
+
+  font-weight: bold;
+
+  font-size: 60px;
+
+  text-align: center;
+
+  padding-bottom: 60px;
+}
+
+#tagline2 {
+
+  font-weight: bold;
+
+  font-size: 32px;
+
+  text-align: center;
+
+  padding-bottom: 60px;
+}
+
+#tagline3 {
+
+  font-weight: bold;
+
+  font-size: 30px;
+
+  text-align: center;
+
+  padding-bottom: 60px;
+}
+
+#join-now {
+
+  height: 150px;
+
+  width: 30%;
+
+  margin: 0 auto;
+
+  border: 2px solid #009EDE;
+
+  background-color: #009EDE;
+
+  border-radius: 10px;
+
+  margin-bottom: 60px;
+
+  text-align: center;
+
+  vertical-align: middle;
+
+  line-height: 150px;
+
+  font-size: 60px;
+
+  color: #FFFFFF;
+
+}
+
+.joinnow-form {
+
+    margin-top: 40px;
+}
+
+.label-size {
+
+  font-size: 20px;
+
+  font-weight: bold;
+}
+
+.joinnow-legend {
+
+  font-size: 25px;
+
+  font-weight: bold;
+
+  margin-bottom: 40px;
+}
+
+.joinnow-submit {
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+a:hover {
+
+    text-decoration: none;
+}
+
+.contact-us-heading {
+
+    font-size: 48px;
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+.contact-us-address {
+
+    height: 240px;
+
+    background-color: #009EDE;
+
+    color: #FFFFFF;
+}
+
+.contact-us-form {
+
+    padding: 40px;
+
+    background-color: #8DC63F;
+}
+
+.contact-us-legend {
+
+  font-size: 25px;
+
+  font-weight: bold;
+}
+
+#send {
+
+    width: 200px;
+
+    height: 50px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    background-color: #E50F63;
+
+    border: 1px solid #E50F63;
+
+}
+
+.map-row {
+
+    margin-top: 40px;
+
+    height: 500px;
+}
+
+.faqs-title {
+
+    text-align: center;
+
+    font-size: 48px;
+
+    margin-bottom: 20px;
+}
+
+.faqs-heading {
+
+    text-align: center;
+
+    font-size: 32px;
+
+    margin-bottom: 40px;
+}
+
+.faqs-row {
+
+    text-align: center;
+}
+
+.panel-body > p {
+
+    font-size: 20px;
+}
+
+.gocar-video {
+
+    margin-top: 100px;
+
+    height: 315px;
+
+    margin-bottom: 40px;
+}
+
+.video-button {
+
+    text-align: center;
+}
+
+.video-button > button {
+
+    background-color: #8DC63F;
+}
+
+.modal-body {
+
+    height: 315px;
+}
+
+#myModal {
+
+    margin-top: 15%;
+}
+
+.range-info {
+
+    text-align: center;
+}
+
+.location-dropdown-title {
+
+    text-align: center;
+
+    font-size: 36px;
+
+    margin: 40px 0 20px 0;
+}
+
+#find-gocars {
+
+  height: 150px;
+
+  width: 30%;
+
+  margin: 0 auto;
+
+  border: 2px solid #E50F63;
+
+  background-color: #E50F63;
+
+  border-radius: 10px;
+
+  margin-bottom: 60px;
+
+  text-align: center;
+
+  vertical-align: middle;
+
+  line-height: 150px;
+
+  font-size: 60px;
+
+  color: #FFFFFF;
+}
+
+
+#log-in {
+
+  height: 150px;
+
+  width: 30%;
+
+  margin: 0 auto;
+
+  border: 2px solid #8DC63F;
+
+  background-color: #8DC63F;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  vertical-align: middle;
+
+  line-height: 150px;
+
+  font-size: 60px;
+
+  color: #FFFFFF;
+}
+
+
+@media screen and (max-width: 768px) {
+
+.nav-bottom {
+
+  margin-top: 60px;
+}
+
+#join-now {
+
+  font-size: 30px;
+
+  width: 40%;
+}
+
+#find-gocars {
+
+  font-size: 30px;
+
+  width: 40%;
+}
+
+#log-in {
+
+  font-size: 30px;
+
+  width: 40%;
+}
+
+@media screen and (max-width: 403px) {
+
+
+#join-now {
+
+  font-size: 20px;
+
+}
+
+#find-gocars {
+
+  font-size: 20px;
+
+}
+
+#log-in {
+
+  font-size: 20px;
+
+}
+
+
+}
+
 }
 

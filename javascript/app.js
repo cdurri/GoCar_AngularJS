@@ -1,25 +1,41 @@
 // create the module and name it mainApp
 // also include ngRoute for all our routing needs
-angular.module('routingApp', ['ngRoute','routingControllers']);
+angular.module('goCarApp', ['ngRoute','routingControllers']);
 // configure our routes
-angular.module('routingApp').config(function($routeProvider) {
+angular.module('goCarApp').config(function($routeProvider) {
 	$routeProvider
 		// route for the home page
-		.when('/', {
+		.when('/home', {
 			templateUrl : 'templates/home.html',
 			controller  : 'HomeController'
 		})
 		// route for the about page
-		.when('/about', {
-			templateUrl : 'templates/about.html',
-			controller  : 'AboutController'
+		.when('/rates', {
+			templateUrl : 'templates/rates.html',
+			controller  : 'RatesController'
 		})
 		// route for the contact page
-		.when('/contact', {
-			templateUrl : 'templates/contact.html',
-			controller  : 'ContactController'
+		.when('/locations', {
+			templateUrl : 'templates/locations.html',
+			controller  : 'LocationsController'
 		})
-		.otherwise({redirectTo: '/'}); ;
+		.when('/faqs', {
+			templateUrl : 'templates/faqs.html',
+			controller  : 'FAQsController'
+		})
+		.when('/contactus', {
+			templateUrl : 'templates/contactus.html',
+			controller  : 'ContactUsController'
+		})
+        .when('/joinnow', {
+            templateUrl : 'templates/joinnow.html',
+            controller  : 'JoinNowController'
+        })
+		.when('/login', {
+			templateUrl : 'templates/login.html',
+			controller  : 'LoginController'
+		})
+		.otherwise({redirectTo: '/home'}); ;
 });
 
 	
