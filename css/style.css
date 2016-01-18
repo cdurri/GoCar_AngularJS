@@ -51,6 +51,13 @@ html, body {
   padding-right: 50px;
 }
 
+.home {
+
+    background-image: url("../images/road-to-city.jpg");
+
+    background-size: cover;
+}
+
 a {
 
   font-size: 25px;
@@ -304,6 +311,18 @@ a:hover {
 .range-info {
 
     text-align: center;
+}
+
+.gocar-tab {
+
+    font-size: 98px;
+
+    padding: 48px;
+}
+
+.euro-sign {
+
+    font-size: 40px;
 }
 
 .location-dropdown-title {
