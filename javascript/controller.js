@@ -37,9 +37,9 @@ angular.module('routingControllers',[])
 
        document.getElementById("map-box").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9544.365322937816!2d-6.233677652992036!3d53.26998321209752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4867090b5444013d%3A0x2600c7a819bb0531!2sSandyford%2C+Co.+Dublin!5e0!3m2!1sen!2sie!4v1450715933395" style="width:100%; height:100%;" frameborder="0" style="border:0" allowfullscreen></iframe>';
    }
-   $scope.malahide = function() {
+   $scope.drumcondra = function() {
 
-       document.getElementById("map-box").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19010.53828040766!2d-6.178169501084038!3d53.44491428028818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48671a891bda8a55%3A0xa00c7a9973215c0!2sMalahide%2C+Co.+Dublin!5e0!3m2!1sen!2sie!4v1450716067508" style="width:100%; height:100%;" frameborder="0" style="border:0" allowfullscreen></iframe>';
+       document.getElementById("map-box").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9521.881569066654!2d-6.262519752947828!3d53.370632532203864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e7762b4c13b%3A0x2600c7a819b93021!2sDrumcondra%2C+Co.+Dublin!5e0!3m2!1sen!2sie!4v1453133344012" style="width:100%; height:100%;" frameborder="0" style="border:0" allowfullscreen></iframe>';
    }
  })
  .controller('FAQsController', ['$scope', '$http', function($scope, $http) {
@@ -50,6 +50,21 @@ angular.module('routingControllers',[])
  }])
  .controller('ContactUsController',function($scope) {
 
+     $scope.contactSend = function() {
+
+         var send = document.getElementById('contact-send');
+
+         if (send) {
+             $scope.sending = function () {
+                 send.innerHTML = '...Sending';
+
+             }
+             $scope.sent = setTimeout(function() {
+
+                 send.innerHTML = 'Sent!'
+             }, 3000)
+         }
+     }
  })
  .controller('JoinNowController',function($scope) {
 
