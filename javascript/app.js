@@ -9,12 +9,12 @@ angular.module('goCarApp').config(function($routeProvider) {
 			templateUrl : 'templates/home.html',
 			controller  : 'HomeController'
 		})
-		// route for the about page
+		// route for the rates page
 		.when('/rates', {
 			templateUrl : 'templates/rates.html',
 			controller  : 'RatesController'
 		})
-		// route for the contact page
+		// route for the locations page
 		.when('/locations', {
 			templateUrl : 'templates/locations.html',
 			controller  : 'LocationsController'
