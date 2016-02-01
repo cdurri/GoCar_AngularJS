@@ -13,19 +13,31 @@
         <form ng-submit="onSubmit(theForm.$valid)" name="theForm" id="contact-form" role="form" class="col-md-5 col-md-offset-3 contact-us-form" novalidate="novalidate">
             <fieldset>
             <legend class="contact-us-legend">Contact Us</legend>
-            <div class="form-group label-size">
+            <div class="form-group label-size" ng-class="{'has-error':!theForm.name.$valid && (!theForm.$pristine || theForm.$submitted),'has-success':theForm.name.$valid && (!theForm.$pristine || theForm.$submitted)}">
                 <label for="name" class="control-label col-md-2">Name:</label>
                 <div class="col-md-8">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name..." required autofocus ng-model="formData.name">
+                     <p class="help-block" ng-show="theForm.name.$error.required && (!theForm.$pristine || theForm.$submitted)">
+                        This field is required
+                    </p>
+                    <p class="help-block" ng-show="theForm.name.$error.name && (!theForm.$pristine || theForm.$submitted)">
+                        Please enter your name
+                    </p>
                 </div>
-                <br><br>
+                <br><br><br>
             </div>
-            <div class="form-group label-size">
+            <div class="form-group label-size" ng-class="{'has-error':!theForm.phone.$valid && (!theForm.$pristine || theForm.$submitted),'has-success':theForm.phone.$valid && (!theForm.$pristine || theForm.$submitted)}">
                 <label for="phone" class="control-label col-md-2">Phone:</label>
                 <div class="col-md-8">
-                    <input type="text" name="phone" class="form-control" id="phone"  placeholder="Enter your phone number..." ng-model="formData.phone">
+                    <input type="text" name="phone" class="form-control" id="phone"  placeholder="Enter your phone number..." pattern="[0-9]{10}" required ng-model="formData.phone">
+                     <p class="help-block" ng-show="theForm.phone.$error.required && (!theForm.$pristine || theForm.$submitted)">
+                        This field is required
+                    </p>
+                    <p class="help-block" ng-show="theForm.phone.$error.phone && (!theForm.$pristine || theForm.$submitted)">
+                        Please enter your phone number
+                    </p>
                 </div>
-                <br><br>
+                <br><br><br>
             </div>
              <div class="form-group label-size" ng-class="{'has-error':!theForm.email.$valid && (!theForm.$pristine || theForm.$submitted),'has-success':theForm.email.$valid && (!theForm.$pristine || theForm.$submitted)}">
                 <label for="email" class="control-label col-md-2">Email:</label>
@@ -37,18 +49,20 @@
                     <p class="help-block" ng-show="theForm.email.$error.email && (!theForm.$pristine || theForm.$submitted)">
                         Please enter an email with at least an @ symbol
                     </p>
-                    <!--<pre>Validation {{ theForm.email.$error | json }}</pre>
-                    <pre>Field Valid? {{ theForm.email.$valid }}</pre>
-                    <pre>Form Pristine? {{ theForm.$pristine }}</pre>
-                    <pre>Form Submitted? {{ theForm.$submitted }}</pre>-->
                 </div>
                 <br><br><br>
             </div>
-            <div class="form-group label-size">
+            <div class="form-group label-size" ng-class="{'has-error':!theForm.message.$valid && (!theForm.$pristine || theForm.$submitted),'has-success':theForm.message.$valid && (!theForm.$pristine || theForm.$submitted)}">
                 <label for="message" class="control-label col-md-2">Message:</label>
                 <div class="col-md-10">
-                    <textarea class="form-control" name="message" rows="5" id="message" ng-model="formData.message"></textarea>
-                    <br><br>
+                    <textarea class="form-control" name="message" rows="5" id="message" required ng-model="formData.message"></textarea>
+                    <p class="help-block" ng-show="theForm.message.$error.required && (!theForm.$pristine || theForm.$submitted)">
+                        This field is required
+                    </p>
+                    <p class="help-block" ng-show="theForm.message.$error.message && (!theForm.$pristine || theForm.$submitted)">
+                        Please enter a message
+                    </p>
+                    <br><br><br>
                 </div>
             </div>
             <label for="contact-send" class="control-label col-md-2"></label>
